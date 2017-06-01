@@ -173,7 +173,7 @@ function Snake() {
 			}
 		}
 	}
-	
+
 	this.touchHandler = function(){//触屏事件处理器
 		var _this = this;
 		document.addEventListener("touchstart",function(ev){
@@ -241,7 +241,7 @@ function Snake() {
 		//判断，蛇移动后新位置是否已经触边界，或触自身  true--dead
 		_this.dead();//判断蛇生死，isDead
 		if(_this.isDead){
-			alert("Your score is:"+_this.score);
+//			alert("Your score is:"+_this.score);
 			clearInterval(_this.timer);//如果不清除定时器，则速度会不断加快
 			_this.isDead = false;//改变isDead状态，否则，每次直接死掉
 			_this.snakeBodyList = [];//清除蛇身，便于重新开始游戏，重绘初始界面

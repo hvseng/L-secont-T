@@ -5,13 +5,49 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 		<title>响应式贪吃蛇1701</title>
+		<link rel="stylesheet" type="text/css" href="static/css/snake.css"/>
 	</head>
 
 	<body>
+		
+		
+		<div id="big">
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<canvas id="gameview" width="500" height="500"></canvas>
 
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/Snake.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="font.js"></script>
 		<script type="text/javascript">
 			$(function() {
 				var snakegame = new Snake();
@@ -23,10 +59,30 @@
 //				$("#gameview").click(function(){
 //					snakegame.paint();
 //				});
+
+               $("#gameview").hide()
 				//直接进入游戏界面
-				bgImg.onload = function(){
+				$("#big").click(function(){
+					$("#gameview").show()
 					snakegame.start();
-				}
+					$(this).hide();
+				})
+				
+			function fn(){
+				var baseFontSize = window.innerWidth/12;
+				$("html").css("font-size",baseFontSize);
+			}
+			
+			fn();
+			
+			$(window).resize(function(){
+				fn();
+			})
+	
+				
+				
+				
+				
 			});
 		</script>
 	</body>
